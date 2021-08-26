@@ -1,19 +1,78 @@
 {
-  "users": [
+  "sodas": [
     {
-      "name": "Sean Maxwell",
-      "email": "sean.maxwell@gmail.com",
-      "id": 159123164363
+      "brandName":"Pepsi",
+      "type": "soda",
+      "distributor":"Pepsi Bottling Co.",
+      "diet":false,
+      "caloriesPerServing":180,
+      "caffeine":true,
+      "glutenFree":false
     },
     {
-      "name": "Gordan Freeman",
-      "email": "gordan.freeman@halflife.com",
-      "id": 906524522143
+      "brandName": "Coca-Cola",
+      "type": "soda",
+      "distributor": "The Coca-Cola Company",
+      "diet":false,
+      "caloriesPerServing":190,
+      "caffeine":true,
+      "glutenFree":false
     },
     {
-      "name": "John Smith",
-      "email": "jsmith@yahoo.com",
-      "id": 357437875835
+      "brandName": "Mello Yellow",
+      "type": "soda",
+      "distributor": "The Coca-Cola Company",
+      "diet":false,
+      "caloriesPerServing":190,
+      "caffeine":true,
+      "glutenFree":false
+    },
+    {
+      "brandName": "Caffeine-Free Diet Pepsi",
+      "type": "soda",
+      "distributor": "Pepsi Bottling Co.",
+      "diet":true,
+      "caloriesPerServing":0,
+      "caffeine":false,
+      "glutenFree":false
+    }
+  ],
+  "snacks": [
+    {
+      "brandName":"Doritos Nacho Cheese",
+      "type": "snack",
+      "distributor":"Doritos",
+      "diet":false,
+      "caloriesPerServing":250,
+      "caffeine":false,
+      "glutenFree":false
+    },
+    {
+      "brandName": "Doritos Cool Ranch",
+      "type": "snack",
+      "distributor": "Doritos",
+      "diet":false,
+      "caloriesPerServing":300,
+      "caffeine":false,
+      "glutenFree":false
+    },
+    {
+      "brandName": "Snickers",
+      "type": "snack",
+      "distributor": "M&M Mars Company",
+      "diet":false,
+      "caloriesPerServing":280,
+      "caffeine":false,
+      "glutenFree":false
+    },
+    {
+      "brandName": "Chili Cheese Fritos",
+      "type": "snack",
+      "distributor": "Frito Lays Company",
+      "diet":false,
+      "caloriesPerServing":312,
+      "caffeine":false,
+      "glutenFree":false
     }
   ]
 }

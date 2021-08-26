@@ -1,7 +1,7 @@
 import StatusCodes from 'http-status-codes';
 import { Request, Response } from 'express';
 
-import UserDao from '@daos/User/UserDao.mock';
+import SnackDao from '@daos/Snack/SnackDao'
 import { paramMissingError } from '@shared/constants';
 
 const snackDao = new SnackDao();
@@ -10,66 +10,66 @@ const { BAD_REQUEST, CREATED, OK } = StatusCodes;
 
 
 /**
- * Get all users.
+ * Get all snacks.
  * 
  * @param req 
  * @param res 
  * @returns 
  */
 export async function getAllSnacks(req: Request, res: Response) {
-    const users = await snackDao.getAll();
-    return res.status(OK).json({users});
+    const snacks = await snackDao.getAll();
+    return res.status(OK).json({snacks});
 }
 
 
 /**
- * Add one user.
+ * Add one snack.
  * 
  * @param req 
  * @param res 
  * @returns 
  */
 export async function addOneSnack(req: Request, res: Response) {
-    const { user } = req.body;
-    if (!user) {
+    const { snack } = req.body;
+    if (!snack) {
         return res.status(BAD_REQUEST).json({
             error: paramMissingError,
         });
     }
-    await snackDao.add(user);
+    await snackDao.add(snack);
     return res.status(CREATED).end();
 }
 
 
 /**
- * Update one user.
+ * Update one snack.
  * 
  * @param req 
  * @param res 
  * @returns 
  */
 export async function updateOneSnack(req: Request, res: Response) {
-    const { user } = req.body;
-    if (!user) {
+    const { snack } = req.body;
+    if (!snack) {
         return res.status(BAD_REQUEST).json({
             error: paramMissingError,
         });
     }
-    user.id = Number(user.id);
-    await snackDao.update(user);
+    snack.brandName =snack.brandName;
+    await snackDao.update(snack);
     return res.status(OK).end();
 }
 
 
 /**
- * Delete one user.
+ * Delete one snack.
  * 
  * @param req 
  * @param res 
  * @returns 
  */
 export async function deleteOneSnack(req: Request, res: Response) {
-    const { id } = req.params;
-    await snackDao.delete(Number(id));
+    const { brandName } = req.params;
+    await snackDao.delete(brandName);
     return res.status(OK).end();
 }

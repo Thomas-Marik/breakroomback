@@ -37,7 +37,7 @@ class Snack implements ISnack {
             this.distributor = distributor || '';
             this.diet = diet || false;
             this.caloriePerServing = caloriePerServing || 0;
-            this.caffeine = caffeine || true;
+            this.caffeine = caffeine || false;
             this.glutenFree = glutenFree || false;
 
         } else {

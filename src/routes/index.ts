@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { getAllUsers, addOneUser, updateOneUser, deleteOneUser } from './Users';
+import { getAllSodas, addOneSoda, updateOneSoda, deleteOneSoda } from './Sodas';
+import { getAllSnacks, addOneSnack, updateOneSnack, deleteOneSnack } from './Snacks';
 
 
 // User-route
@@ -28,4 +30,6 @@ snackRouter.delete('/delete/:id', deleteOneSnack);
 // Export the base-router
 const baseRouter = Router();
 baseRouter.use('/users', userRouter);
+baseRouter.use('/sodas', sodaRouter);
+baseRouter.use('/snacks', snackRouter);
 export default baseRouter;
