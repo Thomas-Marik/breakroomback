@@ -1,11 +1,11 @@
 export interface ISnack {
     brandName: string;
     type: string;
-    distributor: string;
-    diet: boolean;
-    caloriePerServing:number;  
-    caffeine:boolean;
-    glutenFree:boolean;
+    distributor?: string;
+    diet?: boolean;
+    caloriePerServing?:number;  
+    caffeine?:boolean;
+    glutenFree?:boolean;
 
 
 }
@@ -15,11 +15,11 @@ class Snack implements ISnack {
    
     public brandName: string;
     public type: string;
-    public distributor: string;
-    public diet: boolean;
-    public caloriePerServing: number;    
-    public caffeine:boolean;
-    public glutenFree:boolean;
+    public distributor?: string;
+    public diet?: boolean;
+    public caloriePerServing?: number;    
+    public caffeine?:boolean;
+    public glutenFree?:boolean;
 
 
 

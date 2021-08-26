@@ -55,7 +55,7 @@ export async function updateOneSnack(req: Request, res: Response) {
             error: paramMissingError,
         });
     }
-    snack.brandName =snack.brandName;
+    snack.brandName =String(snack.brandName);
     await snackDao.update(snack);
     return res.status(OK).end();
 }

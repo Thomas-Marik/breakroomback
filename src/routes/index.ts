@@ -16,14 +16,14 @@ const sodaRouter = Router();
 sodaRouter.get('/all', getAllSodas);
 sodaRouter.post('/add', addOneSoda);
 sodaRouter.put('/update', updateOneSoda);
-sodaRouter.delete('/delete/:id', deleteOneSoda);
+sodaRouter.delete('/delete/:brandName', deleteOneSoda);
 
 // Snack-route
 const snackRouter = Router();
 snackRouter.get('/all', getAllSnacks);
 snackRouter.post('/add', addOneSnack);
 snackRouter.put('/update', updateOneSnack);
-snackRouter.delete('/delete/:id', deleteOneSnack);
+snackRouter.delete('/delete/:brandName', deleteOneSnack);
 
 
 

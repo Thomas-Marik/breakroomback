@@ -10,7 +10,7 @@ const { BAD_REQUEST, CREATED, OK } = StatusCodes;
 
 
 /**
- * Get all users.
+ * Get all sodas.
  * 
  * @param req 
  * @param res 
@@ -23,7 +23,7 @@ export async function getAllSodas(req: Request, res: Response) {
 
 
 /**
- * Add one user.
+ * Add one soda.
  * 
  * @param req 
  * @param res 
@@ -42,7 +42,7 @@ export async function addOneSoda(req: Request, res: Response) {
 
 
 /**
- * Update one user.
+ * Update one soda.
  * 
  * @param req 
  * @param res 
@@ -55,14 +55,14 @@ export async function updateOneSoda(req: Request, res: Response) {
             error: paramMissingError,
         });
     }
-    soda.brandName = soda.brandName;
+    soda.brandName = String(soda.brandName);
     await sodaDao.update(soda);
     return res.status(OK).end();
 }
 
 
 /**
- * Delete one user.
+ * Delete one soda.
  * 
  * @param req 
  * @param res 

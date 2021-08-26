@@ -60,6 +60,9 @@
     "build.ts"
   ],
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.27.0",
+    "@aws-sdk/lib-dynamodb": "^3.27.0",
+    "aws-sdk": "^2.977.0",
     "command-line-args": "^5.2.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
