@@ -3,7 +3,9 @@ import { IUser } from "@entities/User";
 declare module 'express' {
     export interface Request  {
         body: {
-            user: IUser
+            user: IUser,
+            soda: ISoda,
+            snack:ISnack
         };
     }
 }
